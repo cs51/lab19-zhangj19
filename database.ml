@@ -16,7 +16,6 @@ let cDBSIZE = 100 ;;
 let db : (int, (string * int)) Hashtbl.t =
   Hashtbl.create cDBSIZE ;;
                                               
-(* See .mli file for documentation on individual functions *)
 
 let create (id : id) (name : string) : unit =
   Hashtbl.add db id (name, 0) ;;
