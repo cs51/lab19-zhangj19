@@ -7,19 +7,19 @@
 open Printf ;;
 open Scanf ;;
   
-(* Make use of an account database *)
+
 module DB = Database ;; 
 
 (* Customer account identifiers *)
 type id = int ;;
 
-(* Possible actions that an ATM customer can perform *)
+(*  actions  an ATM customer can perform *)
 type action =
-  | Balance           (* balance inquiry *)
-  | Withdraw of int   (* withdraw an amount *)
-  | Deposit of int    (* deposit an amount *)
-  | Next              (* finish this customer and move on to the next one *)
-  | Finished          (* shut down the ATM and exit entirely *)
+  | Balance      
+  | Withdraw of int 
+  | Deposit of int  
+  | Next              
+  | Finished         
 ;; 
 
 (* A specification of a customer name and initial balance *)
@@ -36,7 +36,7 @@ let initialize (initial : account_spec list) : unit =
                    DB.update id balance) ;;
 
 let rec acquire_id () : id =
-  printf "Enter customer id: "; 
+  printf "Enter id: "; 
   try
     let id = read_int () in
     ignore (DB.exists id); id
