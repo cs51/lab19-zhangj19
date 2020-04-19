@@ -1,7 +1,4 @@
-(*
-                         ATM Account Database
-                              Signature
- *)
+
 
 (* Customer account identifiers *)
 type id = int ;;

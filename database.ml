@@ -1,8 +1,3 @@
-(*
-                         ATM Account Database
-                              Version 3
-                         (Mutable Hash Table)
- *)
 
 
 (* Customer account identifiers *)
